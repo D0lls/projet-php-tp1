@@ -27,7 +27,9 @@
 
 <body id="page-top" class="index">
 
-  <?php  if (isset($_COOKIE['pseudo'])) {
+
+
+  <?php  if (isset($_COOKIE['pseudo'])) { //vérifie si il y a un utilisateur 
    ?>
    <!-- Navigation -->
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">

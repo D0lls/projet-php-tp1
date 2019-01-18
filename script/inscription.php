@@ -2,6 +2,7 @@
 
 require("../function/function.php");
 
+//si toute les données sont exacte -> création d'un compte
 
 if(isset($_POST['nom']) && isset($_POST['mail']) && isset($_POST['mdp']) && isset($_POST['verif_mdp'])){
 

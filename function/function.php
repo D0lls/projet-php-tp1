@@ -1,5 +1,6 @@
 <?php 
 
+//permet l'insertion des messages dans la table messages
 function insertion_bdd($message) {
 require("../bdd/connection.php");
 $message = htmlspecialchars($message);
@@ -14,6 +15,8 @@ $req->execute(array(
 ));
 }
 
+
+//permet de modifier un message dans la table message
 function update_bdd($msg,$id){
 	require("../bdd/connection.php");
 	$req = $bdd->prepare('UPDATE message SET msg=:msg,dates=:dates WHERE id=:id');
@@ -25,6 +28,8 @@ function update_bdd($msg,$id){
 	));	
 }
 
+
+//permet de supprimer un message dans la table message
 function delete_bdd($id){
 	require("../bdd/connection.php");
 	$req = $bdd->prepare('DELETE  FROM message WHERE id=:id');
@@ -34,6 +39,7 @@ function delete_bdd($id){
 	));
 }
 
+//permet d'ajouter un utilisateur dans la table utilisateurs
 function add_users($nom,$mail,$password){
 	require("../bdd/connection.php");
 	$req = $bdd->prepare("INSERT INTO utilisateurs(nom,prenom,mail,password) VALUES(:nom,:prenom,:mail,:password)");
@@ -46,6 +52,7 @@ function add_users($nom,$mail,$password){
 	));
 }
 
+//permet de selectionner l'email d'un utilisateur
 function pick_user($mail){
 require("../bdd/connection.php");
 $req = $bdd->prepare('SELECT * from utilisateurs where mail = :mail ');
@@ -62,7 +69,7 @@ $req = $req->fetch();
 return $req;
 }
 
-
+//permet d'ajouter un vote au message
 function update_vote($id,$ip){
 require("../bdd/connection.php");
 
@@ -91,6 +98,7 @@ return $req2;
 
 }
 
+//permet de garder et vérifier la dernière ip qui a voter
 function last_ip($id){
 require("../bdd/connection.php");
 $req = $bdd->prepare('SELECT * from message where id=:id');

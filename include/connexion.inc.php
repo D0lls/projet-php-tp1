@@ -1,5 +1,7 @@
 <?php 
 
+//Va permettre la connection a la bdd
+
 $serv="localhost";
 $user="root";
 $pass="";

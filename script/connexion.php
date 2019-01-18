@@ -1,5 +1,7 @@
 <?php 
 
+//permet de preparé et recupérer les informations de POST lors de la connection
+
 include("../include/connexion.inc.php");
 $pseudo=$_POST['mail'];
 $passe=$_POST['pass'];
@@ -11,12 +13,12 @@ $prep->execute();
 
 $nbr=$prep->rowCount();
 
-if($nbr==0){
+if($nbr==0){ // Si il n'y a pas d'utilisateur - reste sur la page
 
    // header("Location:..\connection.php");
 
 }
-else{
+else{ //si il y a un utilisateur - création d'un cookie a son nom
 
     $domain = ($_SERVER['HTTP_HOST'] != 'localhost') ? $_SERVER['HTTP_HOST'] : false;
     setcookie('pseudo', $pseudo, time()+60*60*24*365, '/', $domain, false);
