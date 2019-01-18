@@ -1,9 +1,9 @@
 <?php 
 
-include("connexion.inc.php");
-$pseudo=$_POST['pseudo'];
-$passe=$_POST['passe'];
-$query="SELECT * FROM utilisateur WHERE pseudo=:pseudo AND passe=:passe";
+include("../include/connexion.inc.php");
+$pseudo=$_POST['mail'];
+$passe=$_POST['pass'];
+$query="SELECT * FROM utilisateurs WHERE mail=:pseudo AND password=:passe";
 $prep=$pdo->prepare($query);
 $prep->bindValue(':pseudo', $pseudo);
 $prep->bindValue(':passe', $passe);

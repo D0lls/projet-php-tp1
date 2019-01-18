@@ -1,26 +1,41 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Freelancer](http://startbootstrap.com/template-overviews/freelancer/)
+### url site : http://maxence-sailly.lpdim.link/
 
-[Freelancer](http://startbootstrap.com/template-overviews/freelancer/) is a one page freelancer portfolio theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features several content sections, a responsive portfolio grid with hover effects, full page portfolio item modals, and a working PHP contact form.
+# [LP DIM] Maxence Sailly
 
-## Getting Started
+## Installation.
 
-To begin using this template, choose one of the following options to get started:
-* [Download the latest release on Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/)
-* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-freelancer.git`
-* Fork the repo
+### Si la base de données n'existe pas : 
 
-## Bugs and Issues
+ CREATE DATABASE tp1;
 
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-freelancer/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/freelancer/).
 
-## Creator
+### Ensuite créer les tables suivante : 
 
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+CREATE TABLE `message` (
+  `id` int(11) NOT NULL,
+  `msg` text NOT NULL,
+  `dates` int(11) NOT NULL,
+  `vote` int(11) DEFAULT '0',
+  `last_vote` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+CREATE TABLE `utilisateurs` (
+  `id` int(11) NOT NULL,
+  `nom` text NOT NULL,
+  `prenom` text NOT NULL,
+  `mail` text NOT NULL,
+  `password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+### Ensuite faite les Alter Table suivant :
+
+- ALTER TABLE `message` ADD PRIMARY KEY (`id`);
+- ALTER TABLE `utilisateurs` ADD PRIMARY KEY (`id`);
+- ALTER TABLE `utilisateurs` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+- ALTER TABLE `message` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
 
 ## Copyright and License
 
