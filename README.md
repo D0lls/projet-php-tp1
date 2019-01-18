@@ -21,7 +21,6 @@ CREATE TABLE `message` (
 CREATE TABLE `utilisateurs` (
   `id` int(11) NOT NULL,
   `nom` text NOT NULL,
-  `prenom` text NOT NULL,
   `mail` text NOT NULL,
   `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -34,3 +33,7 @@ CREATE TABLE `utilisateurs` (
 - ALTER TABLE `message` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 
+### Inscription par bdd
+### Connection par cookie via bdd
+### Possibilité d'envoyer un message qui se retrouve la fin de la liste
+### Possibilité d'aimé le message, impossible d'aimé de nouveau avec la même ip

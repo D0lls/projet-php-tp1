@@ -35,7 +35,7 @@
 
                         <button type="submit" class="btn btn-primary" id=""><a href="index.php?id=<?php echo  ($donnees['id'])?>">Modifier</a></button>
                         <button type="submit" class="btn btn-danger"><a href="script/delete.php?id=<?php echo ($donnees['id'])?>">Supprimer</a> </button>
-                        <small> <span id="compteur<?php echo $donnees['id'] ?>">(<?php echo($donnees['vote']." ") ?>votes)</span><strong><a class="like" data-id="<?php echo $donnees['id'] ?>"> votez ?</a></strong></small>
+                        <small> <span id="compteur<?php echo $donnees['id'] ?>">(<?php echo($donnees['vote']." ") ?>aimes)</span><strong><a class="like" data-id="<?php echo $donnees['id'] ?>"> Aimez ?</a></strong></small>
 
                 </blockquote>
                 

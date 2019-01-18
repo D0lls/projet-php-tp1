@@ -22,9 +22,8 @@ else {
 }
 ?>
 
-
 <?php 
-if (isset($_SESSION['id'])){
+if (isset($_COOKIE['pseudo'])){
   include("include/displayConnected_inc.php");
 }
 else {

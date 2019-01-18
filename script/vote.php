@@ -21,7 +21,7 @@ echo json_encode($nbVote);
 
 }else{
 
-echo json_encode("Vous avez deja voté");
+echo json_encode("Vous avez deja aimé");
 }
 
 

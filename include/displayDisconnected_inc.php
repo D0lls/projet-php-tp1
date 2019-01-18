@@ -33,7 +33,7 @@
                         </p>
                         <footer><?php echo (date('d m Y',$donnees['dates'])) ?></footer>
 
-                        <small> <span id="compteur<?php echo $donnees['id'] ?>">(<?php echo($donnees['vote']." ") ?>votes)</span><strong><a class="like" data-id="<?php echo $donnees['id'] ?>"> votez ?</a></strong></small>
+                        <small> <span id="compteur<?php echo $donnees['id'] ?>">(<?php echo($donnees['vote']." ") ?>aimes)</span><strong><a class="like" data-id="<?php echo $donnees['id'] ?>"> Aimez ?</a></strong></small>
 
                 </blockquote>
                 

@@ -34,13 +34,12 @@ function delete_bdd($id){
 	));
 }
 
-function add_users($nom,$prenom,$mail,$password){
+function add_users($nom,$mail,$password){
 	require("../bdd/connection.php");
 	$req = $bdd->prepare("INSERT INTO utilisateurs(nom,prenom,mail,password) VALUES(:nom,:prenom,:mail,:password)");
 
 	$req->execute(array(
 		'nom' => $nom,
-		'prenom' => $prenom,
 		'mail' => $mail,
 		'password' => $password
 
