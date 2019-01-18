@@ -1,16 +1,14 @@
-### url site : http://maxence-sailly.lpdim.link/
+### url site : 
 
-# [LP DIM] Maxence Sailly
+# [LP DIM] Andrusiak Victor
 
 ## Installation.
 
 ### Si la base de données n'existe pas : 
 
- CREATE DATABASE tp1;
-
+ CREATE DATABASE tp1_andrusiak;
 
 ### Ensuite créer les tables suivante : 
-
 
 CREATE TABLE `message` (
   `id` int(11) NOT NULL,
@@ -28,7 +26,6 @@ CREATE TABLE `utilisateurs` (
   `password` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
 ### Ensuite faite les Alter Table suivant :
 
 - ALTER TABLE `message` ADD PRIMARY KEY (`id`);
@@ -37,6 +34,3 @@ CREATE TABLE `utilisateurs` (
 - ALTER TABLE `message` MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 
-## Copyright and License
-
-Copyright 2013-2016 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-freelancer/blob/gh-pages/LICENSE) license.
